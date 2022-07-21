@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { TimeStamp } from './components/TimeStamp/TimeStamp.tsx';
+
+function valueChanged(date, inputValue) {
+  return inputValue;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TimeStamp dateFormat={"DD/MM/YYYY hh:mm:ss"} valueChanged={valueChanged} />
     </div>
   );
 }

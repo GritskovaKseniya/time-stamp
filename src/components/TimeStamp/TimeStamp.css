@@ -1,0 +1,28 @@
+.time-stamp {
+    padding-top: 100px;
+    color: rgb(95, 98, 100);
+}
+
+input {
+    border: 0px;
+    border-radius: 7px;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    color: rgb(95, 98, 100);
+}
+
+input:focus {
+    color: rgb(115, 109, 109);
+    outline-color: rgba(142, 135, 135, 0.737);
+    color: rgb(95, 98, 100);
+  }
+
+.padding-sides {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.error-msg {
+    font-size: small;
+    font-style: oblique;
+    color:rgb(169, 58, 58);
+}
