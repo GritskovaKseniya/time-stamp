@@ -9,10 +9,8 @@ export function TimeStamp(props) {
 
     function checkDate(fieldValue: string) {
         var moment = require('moment');
-        // console.log(fieldValue, format, moment(fieldValue, format).isValid())
         var date = (!moment(fieldValue, format, true).isValid()) ? (fieldValue == '' ? null : undefined) : moment(fieldValue, format).format(format)
         moment().toDate();
-        // console.log('DATE:', date)
         return props.valueChanged(date, fieldValue);
     }
 
@@ -42,15 +40,3 @@ export function TimeStamp(props) {
         </div>
     );
 }
-
-
-
-
-// function to_format(date: Date, format: string) {
-//     const result = format.replace('YYYY', date.getFullYear().toString()).replace('MM', add_zero(date.getMonth() + 1)).replace('DD', add_zero(date.getDate())).replace('hh', add_zero(date.getHours())).replace('mm', add_zero(date.getMinutes())).replace('ss', add_zero(date.getSeconds()));
-//     return result;
-// }
-
-// function add_zero(param) {
-//     return param < 10 ? "0".concat(param.toString()) : param.toString();
-// }
