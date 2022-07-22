@@ -14,7 +14,7 @@ export function TimeStamp(props) {
         return props.valueChanged(date, fieldValue);
     }
 
-    const [showMsg, setShowMsg] = useState({ visibility: "hidden" });
+    // const [showMsg, setShowMsg] = useState({ visibility: "hidden" });
 
     return (
         <div className="time-stamp">
@@ -27,16 +27,15 @@ export function TimeStamp(props) {
                     onKeyPress={(event) => event.key === 'Enter' ? checkDate(fieldValue) : ""}
                     onChange={event => {
                         setFieldValue(event.target.value);
-                        var moment = require('moment');
-                        console.log(!moment(fieldValue, format, true).isValid())
-                        setShowMsg({ visibility: moment(fieldValue, format, true).isValid() ? "hidden": "hidden"})
-                        console.log(showMsg)
+                        // var moment = require('moment');
+                        // console.log(!moment(fieldValue, format, true).isValid())
+                        // setShowMsg({ visibility: moment(fieldValue, format, true).isValid() ? "hidden" : "hidden" })
+                        // console.log(showMsg)
                     }}
                     placeholder={props.dateFormat}
                     value={fieldValue} />
-                    <div className="error-msg" style={showMsg}>Wrong date format!</div>
+                {/* <div className="error-msg" style={showMsg}>Wrong date format!</div> */}
             </label>
-            
         </div>
     );
 }
