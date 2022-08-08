@@ -2,6 +2,7 @@ import './App.css';
 import { TimeStamp } from './components/TimeStamp/TimeStamp.tsx';
 
 function valueChanged(date, inputValue) {
+  console.log("valueChanged called!");
   return inputValue;
 }
 
